@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>User Home Page</title>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <i class="fa-solid fa-bars" onclick=showSidebar()></i>
+                <div class="sidebar">
+                    <div class="sidebar_links">
+                        <i class="fa-solid fa-xmark" onclick=hideSidebar()></i>
+                        <a href=""><img src="img/logo.png"></a>
+                        <a href=""><i class="fa-solid fa-window-maximize"></i>Home</a>
+                        <a href=""><i class="fa-solid fa-book-open"></i>Learn</a>
+                    </div>
+                </div>
+                <div class="logo_links">
+                    <a href=""><img src="img/logo.png"></a>
+                    <a href=""><i class="fa-solid fa-window-maximize"></i>Home</a>
+                    <a href=""><i class="fa-solid fa-book-open"></i>Learn</a>
+                </div>
+                <div class="profile_links">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button class="profile"><img src="img/profile.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="banner">
+            <img src="img/background.png" alt="">
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="">Pre Security</a></li>
+                    <li><a href="">Introduction To Cyber Security</a></li>
+                    <li><span href="" class="active-breadcrumb">Intro To Offensive Security</>
+                    </li>
+                </ul>
+            </div>
+            <div class="course-info">
+                <img src="img/course_image.png" alt="">
+                <div class="course-text">
+                    <h1>intro to offensive security</h1>
+                    <p>Hack your first website (legally in a safe environment) and experience an ethical hacker's job.
+                    </p>
+                    <div class="course-icons">
+                        <div class="diff">
+                            <div class="easy">
+                                <i class="fa-solid fa-signal"></i>
+                                <p>Easy</p>
+                            </div>
+                        </div>
+                        <div class="duration">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>15 min</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="options">
+                <button>
+                    <i class="far fa-bookmark"></i>
+                    <p>Save Room</p>
+                </button>
+                <div class="like">
+                    <button>
+                        <i class="fas fa-thumbs-up"></i>
+                        <p>52952</p>
+                    </button>
+                    <button>
+                        <i class="fas fa-thumbs-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Course Content -->
+    <div class="course">
+        <div class="container">
+            <div class="row">
+                <div class="faq-section">
+                    <dl class="section-text">
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp faq-header"><span>Task 1</span> SQL Injection</dt>
+                        <dd class="fadeInUp faq-body">
+                            <ul>
+                                <li>
+                                    <p>SQL injection is a code injection technique that might destroy your database.</p>
+                                </li>
+                                <li>
+                                    <p>SQL injection is one of the most common web hacking techniques.</p>
+                                </li>
+                                <li>
+                                    <p>SQL injection is the placement of malicious code in SQL statements, via web page
+                                        input.</p>
+                                </li>
+                            </ul>
+                            <!-- <form action="">
+                                <input type="text" name="answer" placeholder="Answer Format: **********">
+                                <button><i class="fa-regular fa-paper-plane"></i>Submit</button>
+                            </form> -->
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp faq-header"><span>Task 2</span>SQL in Web Pages</dt>
+                        <dd class="faq-body">
+                            <ul>
+                                <li>SQL injection usually occurs when you ask a user for input, like their
+                                    username/userid, and instead of a name/id, the user gives you an SQL statement that
+                                    you will unknowingly run on your database.</li>
+                                <li>Look at the following example which creates a <span> SELECT </span>statement by
+                                    adding a variable (txtUserId) to a select string. The variable is fetched from user
+                                    input (getRequestString):</li>
+                                <li>
+                                    <h2>Example</h2>
+                                </li>
+                                <pre>
+                                        <code>
+                                            <span>txtUserId = getRequestString("UserId");
+                                            </span>
+                                            <span>
+                                                txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+                                            </span>
+                                        </code>
+                                    </pre>
+                            </ul>
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp faq-header"><span>Task 3</span>SQL Injection Based on 1=1 is Always
+                            True
+                        </dt>
+                        <dd class="faq-body">
+                            <ul>
+                                <li>SQL Injection Based on 1=1 is Always True</li>
+                                <li>If there is nothing to prevent a user from entering "wrong" input, the user can
+                                    enter some "smart" input like this:</li>
+                                <pre><code>
+                                            <span>UserId: 105 OR 1=1</span>
+                                        </code></pre>
+                                <li>Then, the SQL statement will look like this:</li>
+                                <pre><code>
+                                        <span>SELECT * FROM Users WHERE UserId = 105 OR 1=1;</span>
+                                    </code></pre>
+                                <li>The SQL above is valid and will return ALL rows from the "Users" table, since OR 1=1
+                                    is always TRUE.</li>
+                                <li>Does the example above look dangerous? What if the "Users" table contains names and
+                                    passwords?</li>
+                                <li>The SQL statement above is much the same as this:</li>
+                                <pre><code>
+                                        <span>SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;</span>
+                                    </code></pre>
+                                <li>A hacker might get access to all the user names and passwords in a database, by
+                                    simply inserting 105 OR 1=1 into the input field.</li>
+                            </ul>
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp faq-header"><span>Task 4</span>SQL Injection Based on ""="" is Always True</dt>
+                        <dd class="faq-body">
+                            <ul>
+                                <li>Here is an example of a user login on a web site:</li>
+                                <div class="input">
+                                    <label>Username: </label>
+                                    <input type="text" placeholder="John Doe" disabled>
+                                </div>
+                                <div class="input">
+                                    <label>Password: </label>
+                                    <input type="text" placeholder="myPass" disabled>
+                                </div>
+                                <li><h2>Example</h2></li>
+                                <pre>
+                                    <code>
+                                        <span>uName = getRequestString("username");</span>
+                                        <span>uPass = getRequestString("userpassword");</span>
+                                        <span>sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' +uPass + '"'</span>
+                                    </code>
+                                </pre>
+                                <li><h2>Result</h2></li>
+                                <pre><code>
+                                    <span>SELECT * FROM Users WHERE Name ="John Doe" AND Pass ="myPass"</span>
+                                </code></pre>
+                                <li>A hacker might get access to <span>user names</span> and <span>passwords</span> in a database by simply inserting <span>" OR ""=" </span> into the user name or password text box:</li>
+                                <div class="input">
+                                    <label>Username: </label>
+                                    <input type="text" placeholder='" or ""="' disabled>
+                                </div>
+                                <div class="input">
+                                    <label>Password: </label>
+                                    <input type="text" placeholder='" or ""="' disabled>
+                                </div>
+                                <li>The code at the server will create a valid SQL statement like this:</li>
+                                <li><h2>Result</h2></li>
+                                <pre><code>
+                                    <span>SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""</span>
+                                </code></pre>
+                                <li>The SQL above is valid and will return all rows from the "Users" table, since OR ""="" is always TRUE.</li>
+                            </ul>
+                        </dd>
+                        <!-- Single FAQ Area -->
+                        <dt class="wave fadeInUp faq-header"><span>Task 5</span>SQL Injection Based on Batched SQL Statements </dt>
+                            <dd class="faq-body">
+                            <ul>
+                                <li>Most databases support batched SQL statement.</li>
+                                <li>A batch of SQL statements is a group of two or more SQL statements, separated by semicolons.</li>
+                                <li>The SQL statement below will return all rows from the "Users" table, then delete the "Suppliers" table.</li>
+                                <li><h2>Example</h2></li>
+                                <pre><code>
+                                    <span>SELECT * FROM Users; DROP TABLE Suppliers</span>
+                                </code></pre>
+                                <li>Look at the following example:</li>
+                                <li><h2>Example</h2></li>
+                                <pre><code>
+                                    <span>txtUserId = getRequestString("UserId");</span>
+                                    <span>txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;</span>
+                                </code></pre>
+                                <li>And the following input:</li>
+                                <div class="input">
+                                    <label>User id: </label>
+                                    <input type="text" placeholder="105; DROP TABLE Suppliers" disabled>
+                                    <li>The valid SQL statement would look like this:</li>
+                                    <li><h2>Reesult</h2></li>
+                                    <pre><code>
+                                        <span>SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers;</span>
+                                    </code></pre>
+                                </div>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Course Content -->
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="copyright">Copyright CyberLabs</div>
+                <div class="links">
+                    <ul>
+                        <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
