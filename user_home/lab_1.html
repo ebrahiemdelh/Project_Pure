@@ -35,7 +35,23 @@
                 </div>
                 <div class="profile_links">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <button class="profile"><img src="img/profile.png" alt=""></button>
+                    <div class="profile-section">
+                        <button class="profile" onclick=showProfileList() ><img src="img/profile.png" alt=""></button>
+                        <div class="profile_list">
+                            <ul>
+                                <li><a href=""><i class="fas fa-user"></i> View Profile</li></a>
+                                <li><a href=""><i class="fas fa-gear"></i> Manage Account</li></a>
+                            </ul>
+                            <ul>
+                                <li><a href=""><i class="fas fa-award"></i> Badges</li></a>
+                                <li><a href=""><i class="fas fa-door-closed"></i> My Rooms</li></a>
+                                <li><a href=""><i class="fas fa-key"></i> Access</li></a>
+                            </ul>
+                            <ul>
+                                <li><a href=""><i class="fas fa-right-from-bracket"></i> Log Out</li></a>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,7 +188,8 @@
                             </ul>
                         </dd>
                         <!-- Single FAQ Area -->
-                        <dt class="wave fadeInUp faq-header"><span>Task 4</span>SQL Injection Based on ""="" is Always True</dt>
+                        <dt class="wave fadeInUp faq-header"><span>Task 4</span>SQL Injection Based on ""="" is Always
+                            True</dt>
                         <dd class="faq-body">
                             <ul>
                                 <li>Here is an example of a user login on a web site:</li>
@@ -184,7 +201,9 @@
                                     <label>Password: </label>
                                     <input type="text" placeholder="myPass" disabled>
                                 </div>
-                                <li><h2>Example</h2></li>
+                                <li>
+                                    <h2>Example</h2>
+                                </li>
                                 <pre>
                                     <code>
                                         <span>uName = getRequestString("username");</span>
@@ -192,11 +211,15 @@
                                         <span>sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' +uPass + '"'</span>
                                     </code>
                                 </pre>
-                                <li><h2>Result</h2></li>
+                                <li>
+                                    <h2>Result</h2>
+                                </li>
                                 <pre><code>
                                     <span>SELECT * FROM Users WHERE Name ="John Doe" AND Pass ="myPass"</span>
                                 </code></pre>
-                                <li>A hacker might get access to <span>user names</span> and <span>passwords</span> in a database by simply inserting <span>" OR ""=" </span> into the user name or password text box:</li>
+                                <li>A hacker might get access to <span>user names</span> and <span>passwords</span> in a
+                                    database by simply inserting <span>" OR ""=" </span> into the user name or password
+                                    text box:</li>
                                 <div class="input">
                                     <label>Username: </label>
                                     <input type="text" placeholder='" or ""="' disabled>
@@ -206,26 +229,36 @@
                                     <input type="text" placeholder='" or ""="' disabled>
                                 </div>
                                 <li>The code at the server will create a valid SQL statement like this:</li>
-                                <li><h2>Result</h2></li>
+                                <li>
+                                    <h2>Result</h2>
+                                </li>
                                 <pre><code>
                                     <span>SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""</span>
                                 </code></pre>
-                                <li>The SQL above is valid and will return all rows from the "Users" table, since OR ""="" is always TRUE.</li>
+                                <li>The SQL above is valid and will return all rows from the "Users" table, since OR
+                                    ""="" is always TRUE.</li>
                             </ul>
                         </dd>
                         <!-- Single FAQ Area -->
-                        <dt class="wave fadeInUp faq-header"><span>Task 5</span>SQL Injection Based on Batched SQL Statements </dt>
-                            <dd class="faq-body">
+                        <dt class="wave fadeInUp faq-header"><span>Task 5</span>SQL Injection Based on Batched SQL
+                            Statements </dt>
+                        <dd class="faq-body">
                             <ul>
                                 <li>Most databases support batched SQL statement.</li>
-                                <li>A batch of SQL statements is a group of two or more SQL statements, separated by semicolons.</li>
-                                <li>The SQL statement below will return all rows from the "Users" table, then delete the "Suppliers" table.</li>
-                                <li><h2>Example</h2></li>
+                                <li>A batch of SQL statements is a group of two or more SQL statements, separated by
+                                    semicolons.</li>
+                                <li>The SQL statement below will return all rows from the "Users" table, then delete the
+                                    "Suppliers" table.</li>
+                                <li>
+                                    <h2>Example</h2>
+                                </li>
                                 <pre><code>
                                     <span>SELECT * FROM Users; DROP TABLE Suppliers</span>
                                 </code></pre>
                                 <li>Look at the following example:</li>
-                                <li><h2>Example</h2></li>
+                                <li>
+                                    <h2>Example</h2>
+                                </li>
                                 <pre><code>
                                     <span>txtUserId = getRequestString("UserId");</span>
                                     <span>txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;</span>
@@ -235,7 +268,9 @@
                                     <label>User id: </label>
                                     <input type="text" placeholder="105; DROP TABLE Suppliers" disabled>
                                     <li>The valid SQL statement would look like this:</li>
-                                    <li><h2>Reesult</h2></li>
+                                    <li>
+                                        <h2>Reesult</h2>
+                                    </li>
                                     <pre><code>
                                         <span>SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers;</span>
                                     </code></pre>
@@ -243,6 +278,9 @@
                             </ul>
                         </dd>
                     </dl>
+                </div>
+                <div class="go-to-section">
+                    <a href="" class="go-to">Go To Lab</a>
                 </div>
             </div>
         </div>

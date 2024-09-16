@@ -89,6 +89,7 @@ a {
     position: sticky;
     width: 100%;
     z-index: 4;
+    padding: 5px 0;
 }
 
 .header .row {
@@ -193,9 +194,10 @@ a {
     display: block;
     width: auto;
 }
-
-.header .profile {
+.header .profile-section {
     position: relative;
+}
+.header .profile {
     border: 2px solid rgba(82, 90, 106) !important;
     width: 56px;
     height: 56px;
@@ -203,7 +205,28 @@ a {
     border-radius: 50%;
     margin-left: 25px;
 }
-
+.header .profile_links .profile-section .profile_list {
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    padding: 10px;
+    right: 0;
+    display: none;
+}
+.header .profile_links .profile-section .profile_list ul:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
+.header .profile_links .profile-section .profile_list ul li a{
+    padding: 10px 0;
+    color: #777;
+    width: 100%;
+    display: block;
+    text-align: start;
+    font-size: 14px;
+}
+.header .profile_links .profile-section .profile_list ul li a i{
+    margin-right: 7px;
+}
 .header .profile:hover {
     border: 2px solid var(--sec-main-color) !important;
 }
@@ -583,7 +606,27 @@ a {
 .faq-section .section-text .faq-body form button:hover:not(:disabled) {
     background-color: rgb(163, 234, 42);
 }
+.go-to-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
 
+.go-to {
+    margin-top: 50px;    
+    border-radius: 5px;
+    max-width: 100%;
+    font-size: 16px;
+    padding: 7px 16px;
+    background-color: transparent;
+    color: rgb(21, 28, 43);
+    border: 1px solid rgb(163, 234, 42);
+    transition: var(--main-transition);
+}
+.go-to:hover {
+    background-color: rgb(163, 234, 42);
+}
 /* End Course Content */
 /* Start Footer */
 .footer {

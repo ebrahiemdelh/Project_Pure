@@ -6,12 +6,24 @@ function hideSidebar() {
   const sidebar = document.querySelector(".sidebar");
   sidebar.style.left = "-100%";
 }
+function showProfileList() {
+  const profileList = document.querySelector(".profile_list");
+  // Toggle visibility
+  if (
+    profileList.style.display === "none" ||
+    profileList.style.display === ""
+  ) {
+    profileList.style.display = "block";
+  } else {
+    profileList.style.display = "none";
+  }
+}
 
 (function ($) {
   // :: Accordian Active Code
   (function () {
     var dd = $("dd");
-    
+
     // Initially hide all dd elements
     dd.hide();
 
@@ -27,7 +39,7 @@ function hideSidebar() {
         $(this).addClass("active").next("dd").slideDown(500);
       }
     });
-    
+
     // Optional: Button to show or hide all dd elements
     $("#toggle-all").on("click", function () {
       if (dd.is(":visible")) {
