@@ -38,8 +38,6 @@ a {
 }
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -114,6 +112,7 @@ a {
     color: var(--font-color);
     float: right;
     padding: 10px;
+    align-self: end;
 }
 
 .header .row .sidebar {
@@ -138,7 +137,7 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-start;
 }
 
@@ -153,7 +152,12 @@ a {
 .header .row .sidebar_links a i:not(.fa-xmark) {
     margin-right: 20px;
 }
-
+@media (max-width: 991px) {
+    .header .row .sidebar_links a i:not(.fa-xmark) {
+        margin-right: 7px;
+    }
+    
+}
 .header .row .logo_links,
 .header .row .profile_links {
     display: flex;
@@ -184,6 +188,10 @@ a {
     transition: var(--main-transition);
 }
 
+.header .row a.logo {
+    margin-left: 0;
+}
+
 .header .row a:hover {
     color: var(--font-color-hover);
 }
@@ -194,9 +202,11 @@ a {
     display: block;
     width: auto;
 }
+
 .header .profile-section {
     position: relative;
 }
+
 .header .profile {
     border: 2px solid rgba(82, 90, 106) !important;
     width: 56px;
@@ -205,6 +215,7 @@ a {
     border-radius: 50%;
     margin-left: 25px;
 }
+
 .header .profile_links .profile-section .profile_list {
     position: absolute;
     background-color: white;
@@ -213,10 +224,12 @@ a {
     right: 0;
     display: none;
 }
+
 .header .profile_links .profile-section .profile_list ul:not(:last-child) {
     border-bottom: 1px solid #e0e0e0;
 }
-.header .profile_links .profile-section .profile_list ul li a{
+
+.header .profile_links .profile-section .profile_list ul li a {
     padding: 10px 0;
     color: #777;
     width: 100%;
@@ -224,9 +237,11 @@ a {
     text-align: start;
     font-size: 14px;
 }
-.header .profile_links .profile-section .profile_list ul li a i{
+
+.header .profile_links .profile-section .profile_list ul li a i {
     margin-right: 7px;
 }
+
 .header .profile:hover {
     border: 2px solid var(--sec-main-color) !important;
 }
