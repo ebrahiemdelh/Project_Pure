@@ -542,12 +542,21 @@ a {
     list-style: "- ";
     margin-bottom: 10px;
 }
-
-.faq-section .section-text .faq-body ul li span {
-    color: red;
+.faq-section .section-text .faq-body ol li {
+    list-style: decimal;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.faq-section .section-text .faq-body ul li a {
+    color: #ff4747;
+    text-decoration: underline;
 }
 
-.faq-section .section-text .faq-body ul li h2 {
+.faq-section .section-text .faq-body ul li span {
+    color: blue;
+}
+
+.faq-section .section-text .faq-body  li h2 {
     color: #ff4747;
 }
 
