@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style_home.css">
     <title>Home Page</title>
 </head>
+
 <body>
     <!-- Start Header -->
     <div class="header">
@@ -28,13 +35,80 @@
                 </div>
                 <div class="profile_links">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <button class="profile"><img src="img/profile.png" alt=""></button>
+                    <div class="profile-section">
+                        <button class="profile" onclick=showProfileList()><img src="img/profile.png" alt=""></button>
+                        <div class="profile_list">
+                            <ul>
+                                <li><a href=""><i class="fas fa-user"></i> View Profile</li></a>
+                                <li><a href=""><i class="fas fa-gear"></i> Manage Account</li></a>
+                            </ul>
+                            <ul>
+                                <li><a href=""><i class="fas fa-award"></i> Badges</li></a>
+                                <li><a href=""><i class="fas fa-door-closed"></i> My Rooms</li></a>
+                                <li><a href=""><i class="fas fa-key"></i> Access</li></a>
+                            </ul>
+                            <ul>
+                                <li><a href=""><i class="fas fa-right-from-bracket"></i> Log Out</li></a>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Header -->
-    
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="container">
+            <div class="course-info">
+                <div class="course-text">
+                    <h1>Learn</h1>
+                    <p class="brief"><i class="fa-solid fa-book-open"></i> Hands-on Hacking</p>
+                    <p>Our content is guided with interactive exercises based on real-world scenarios, from hacking
+                        machines to investigating attacks, we've got you covered.</p>
+                </div>
+                <div class="course-icon">
+                    <div class="border">
+                        <div class="content">
+                            <i class="fas fa-book-open"></i>
+                            <p>Learn</p>
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Courses -->
+    <div class="course">
+        <div class="container">
+            <h2>Learning Paths</h2>
+            <p class="section-p">Work your way through a structured learning path</p>
+            <div class="row">
+                <a href="lab_1.html" class="course-card">
+                    <div class="course-image">
+                        <img src="img/course_image_home.png" alt="">
+                    </div>
+                    <div class="course-text">
+                        <h3>Pre Security</h3>
+                        <p>Before hacking something, you first need to understand the basics</p>
+                        <ul class="circled-order">
+                            <li>Cyber Security Basics</li>
+                            <li>Networking Basics and Weaknesses</li>
+                            <li>The Web And Common Attacks</li>
+                            <li>Learn to Use The Linux OS</li>
+                        </ul>
+                    </div>
+                    <div class="easy">
+                        <i class="fa-solid fa-signal"></i>
+                        <p>Easy</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- End Courses -->
     <!-- Start Footer -->
     <div class="footer">
         <div class="container">
@@ -55,4 +129,5 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
